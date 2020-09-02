@@ -5,7 +5,21 @@
 </p>
 
 ---
+### Projeto
 
+Este é um projeto que esta em desenvolvimento. 
+
+<p><i>Tela de acessso</i></p>
+<p aligin="center">
+    <img src="./src/assets/telaAcesso.jpeg"/>
+</p>
+
+<p><i>Tela de cadastro</i></p>
+<p aligin="center">
+    <img src="./src/assets/telaAcesso.jpeg"/>
+</p>
+
+---
 
 ### Dependências
 
@@ -13,9 +27,11 @@
 
 <p>Este projeto é conectado com o firebase, então o primeiro passo é criar uma conta no firebase para realiizar as configurações.</p>
 
+<p>Para instalar o faribase:</p>
+
 ``` npm install --save firebase ```
 
-<p>Agora com o firebase instalado podemos instalar o Async Storage com o comando:</p>
+<p>Agora com o firebase instalado, podemos instalar o Async Storage com o comando:</p>
 
 ``` yarn add '@react-native-community/async-storage  ```
 
@@ -39,6 +55,16 @@
 ``` yarn add @react-navigation/drawer ```
  
 
-<p><b>Reinicie seu emulador</b> e agora em qualquer componente você pode utilizar o pacote de fontes que preferir utilizando o componente <b>Icon</b></p>
+---
+### Documentação 
 
-```
+
+-  [React Navigation](https://reactnavigation.org/)
+
+
+- [Firebase](https://firebase.google.com/)
+
+- [Styled-Components](styled-components.com)
+
+---
+Em desenvolvivento DevMarililia
