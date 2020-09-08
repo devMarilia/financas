@@ -1,11 +1,25 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, createContext, useEffect } from 'react';
 import firebase from '../services/firebaseConnection';
+import { AsyncStorage } from 'react-native';
 
 export const AuthContext = createContext({});
 
 function AuthProvider({ children }){
     const [user, setUser] = useState(null);
 
+  useEffect (()=> {
+    async function loadSotorage(){
+      const storageUser = await AsyncStorage.getItem('Auth_user')
+
+      if(storageUser) {
+        setUser(JSON.parse(storageUser))
+      }
+    }
+
+    loadSotorage()
+
+  }, [])
+    
     //Logar usuário 
     async function signIn(email, password) {
       await firebase.auth().signInWithEmailAndPassword(email, password)
@@ -19,6 +33,7 @@ function AuthProvider({ children }){
             email: value.user.email,
           }
           setUser(data)
+          storageUser(data)
         })
       })
       .catch((error) => {
@@ -42,8 +57,13 @@ function AuthProvider({ children }){
                     email: value.user.email,
                 };
                 setUser(data);
+                storageUser(data)
             })
         })
+    }
+    // salvar dados n storage
+    async function storageUser(data){
+      await AsyncStorage.setItem('Auth_user', JSON.stringfy(data))
     }
 
     return(
