@@ -6,6 +6,7 @@ export const AuthContext = createContext({});
 
 function AuthProvider({ children }){
     const [user, setUser] = useState(null);
+    const [loading, setLoading] =useState(true)
 
   useEffect (()=> {
     async function loadSotorage(){
@@ -13,7 +14,9 @@ function AuthProvider({ children }){
 
       if(storageUser) {
         setUser(JSON.parse(storageUser))
+        setLoading(false)
       }
+      setLoading(false)
     }
 
     loadSotorage()
@@ -67,7 +70,7 @@ function AuthProvider({ children }){
     }
 
     return(
-     <AuthContext.Provider value={{ signed: !!user , user, signUp, signIn }}>
+     <AuthContext.Provider value={{ signed: !!user , user, signUp, signIn, loading }}>
          {children}
      </AuthContext.Provider>   
     );
