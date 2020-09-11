@@ -13,7 +13,7 @@ export default function Home() {
     {key: '2', tipo: 'despesa', valor: 100},
     {key: '3', tipo: 'receita', valor: 450},
     {key: '4', tipo: 'despesa', valor: 75},
-    {key: '5', tipo: 'despesa', valor: 250},
+    {key: '5', tipo: 'despesa', valor: 250}, 
   ])
   const { user } = useContext(AuthContext)
 
