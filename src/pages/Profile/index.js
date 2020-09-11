@@ -25,5 +25,5 @@ export default function Profile() {
          <LogoutText>Sair</LogoutText>
        </Logout>
    </Container>
-  );
+  )
 }
