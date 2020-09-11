@@ -53,7 +53,10 @@ Este é um projeto que esta em desenvolvimento.
 <p><i>Instalando a biblioteca Drawer navigation</i></p>
 
 ``` yarn add @react-navigation/drawer ```
+
+<p><i>Instalando a biblioteca Picker</i></p>
  
+ ``` yarn add @react-native-community/picker ```
 
 ---
 ### Documentação 
